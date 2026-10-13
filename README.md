@@ -19,7 +19,7 @@
 
 I'm a father, husband, and Microsoft Security consultant based in Texas. I help organizations design, deploy, and operationalize the Microsoft Security stack, from identity and threat protection to data security and compliance.
 
-Over 5+ years I've worked across environments from SMB to 50,000 users, spanning **Government, Education, Retail, Manufacturing, Finance, Insurance, and Automotive**. My path started on the bench as a service technician, moved through help desk and managed services, and grew into consulting, architecture, and engineering for enterprise security engagements.
+Over 5+ years I've worked across environments from SMB to 50k+ users, spanning **Government, Education, Retail, Manufacturing, Finance, Insurance, and Automotive**. My path started on the bench as a service technician, moved through help desk and managed services, and grew into consulting, architecture, and engineering for enterprise security engagements.
 
 Today I'm a **Microsoft 365 Security Engineer at Patriot Consulting Technology Group**, a Microsoft Security Partner.
 
@@ -33,11 +33,10 @@ Outside of client work I run **Guardians of Kings Landing**, a blog and YouTube 
 |---|---|
 | **Identity & Access** | Entra ID, Conditional Access, Identity Governance, authentication strategy |
 | **Threat Protection** | Defender XDR, Defender for Endpoint, Defender for Office 365, Defender for Cloud Apps, Defender for Cloud |
-| **SIEM & Response** | Microsoft Sentinel, Log Analytics, incident response |
+| **SIEM & Response** | Microsoft Sentinel & incident response |
 | **Data Security & Compliance** | Microsoft Purview: DLP & Information Protection |
 | **Endpoint Management** | Intune & AD |
-| **Automation** | PowerShell, Microsoft Graph API |
-| **Cloud** | Azure/Entra, Active Directory |
+| **Automation** | PowerShell & Microsoft Graph API |
 
 ---
 
@@ -53,7 +52,7 @@ Outside of client work I run **Guardians of Kings Landing**, a blog and YouTube 
 - AZ-900 · Azure Fundamentals
 - MS-900 · Microsoft 365 Fundamentals
 
-🎓 **B.B.A. in Cyber Security** — University of Texas at San Antonio
+🎓 **B.B.A. in Cyber Security** University of Texas at San Antonio
 
 ---
 
