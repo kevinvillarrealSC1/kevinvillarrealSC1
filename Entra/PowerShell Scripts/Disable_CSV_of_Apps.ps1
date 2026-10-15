@@ -5,7 +5,7 @@ Import-Module Microsoft.Graph.Applications
 Connect-MgGraph -Scopes "Application.ReadWrite.All"
 
 # Path to the CSV file
-$csvPath = "<path to file>"
+$csvPath = "C:\Users\kvillarreal\OneDrive - Quisitive\00 Spyglass\Rich Products\MDCA\rubrikExchangeApps.csv"
 
 # Import the CSV
 $appList = Import-Csv -Path $csvPath
@@ -17,9 +17,9 @@ foreach ($app in $appList) {
     $appObject = Get-MgServicePrincipal -Filter "appId eq '$appId'"
 
     if ($appObject) {
-        # Delete/Remove the application
-        Remove-MgServicePrincipal -ServicePrincipalId $appObject.Id
-        Write-Host "Deleted application with App ID: $appId"
+        # Disable the application by setting 'accountEnabled' to $false
+        Update-MgServicePrincipal -ServicePrincipalId $appObject.Id -AccountEnabled:$false
+        Write-Host "Disabled application with App ID: $appId"
     } else {
         Write-Warning "Application with App ID $appId not found."
     }
