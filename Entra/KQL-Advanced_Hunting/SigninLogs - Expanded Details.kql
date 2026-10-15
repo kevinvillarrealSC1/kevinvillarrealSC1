@@ -1,0 +1,57 @@
+SigninLogs
+| where TimeGenerated >= ago(3d)
+| where UserPrincipalName contains "<upn>" //populate your UPN
+| extend browser_ = tostring(DeviceDetail.browser)
+| extend deviceId_ = tostring(DeviceDetail.deviceId)
+| extend operatingSystem_ = tostring(DeviceDetail.operatingSystem)
+| extend displayName_ = tostring(DeviceDetail.displayName)
+| extend isCompliant_ = tostring(DeviceDetail.isCompliant)
+| extend isManaged_ = tostring(DeviceDetail.isManaged)
+| extend trustType_ = tostring(DeviceDetail.trustType)
+| extend authenticationStepRequirement_ = tostring(parse_json(AuthenticationDetails)[1].authenticationStepRequirement)
+| extend authenticationStepResultDetail_1 = tostring(parse_json(AuthenticationDetails)[1].authenticationStepResultDetail)
+| extend authenticationMethod_ = tostring(parse_json(AuthenticationDetails)[0].authenticationMethod)
+| extend authenticationStepResultDetail_ = tostring(parse_json(AuthenticationDetails)[0].authenticationStepResultDetail)
+| extend SessionLifetimePolicy_detail_ = tostring(parse_json(SessionLifetimePolicies)[0].detail)
+| extend SessionLifetimePolicy_expirationRequirement_ = tostring(parse_json(SessionLifetimePolicies)[0].expirationRequirement)
+| project 
+    TimeGenerated, 
+    //OperationName,
+    UserDisplayName,
+    UserPrincipalName,
+    DeviceDetail,
+    browser_,
+    deviceId_,
+    operatingSystem_,
+    displayName_,
+    isCompliant_,
+    isManaged_,
+    trustType_,
+    NetworkLocationDetails,
+    Location,
+    IPAddress,
+    AppDisplayName,
+    AppId,
+    ClientAppUsed,
+    UserAgent, 
+    ResultType,
+    ResultSignature,
+    ResultDescription,
+    CorrelationId,
+    SessionId,
+    UniqueTokenIdentifier,
+    //Identity,
+    SessionLifetimePolicy_detail_,
+    SessionLifetimePolicy_expirationRequirement_,
+    authenticationMethod_,
+    authenticationStepResultDetail_1,
+    authenticationStepRequirement_,
+    authenticationStepResultDetail_,
+    AuthenticationDetails,
+    AuthenticationContextClassReferences,
+    AuthenticationProcessingDetails,
+    AuthenticationRequirement,
+    AuthenticationRequirementPolicies,
+    ConditionalAccessPolicies,
+    ConditionalAccessStatus,
+    ResourceDisplayName
