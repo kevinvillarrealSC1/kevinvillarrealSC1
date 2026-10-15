@@ -5,7 +5,7 @@ Import-Module Microsoft.Graph.Applications
 Connect-MgGraph -Scopes "Application.ReadWrite.All"
 
 # Path to the CSV file
-$csvPath = "C:\Users\kvillarreal\OneDrive - Quisitive\00 Spyglass\Rich Products\MDCA\rubrikExchangeApps.csv"
+$csvPath = "<path to csv>"
 
 # Import the CSV
 $appList = Import-Csv -Path $csvPath
