@@ -1,0 +1,21 @@
+//KQL - SigninLogs using Device Code Flow
+SigninLogs
+| where TimeGenerated >= ago(90d)
+| where OriginalTransferMethod == "deviceCodeFlow"
+| project 
+    TimeGenerated, 
+    UserDisplayName,
+    UserPrincipalName,
+    IPAddress,
+    AppDisplayName,
+    AppId,
+    ClientAppUsed,
+    SignInIdentifier,
+    UserAgent,
+    ResultType,
+    ResultDescription,
+    ResourceDisplayName,
+    SessionId,
+    UniqueTokenIdentifier,
+    AuthenticationProtocol,
+    OriginalTransferMethod
